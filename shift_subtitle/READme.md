@@ -2,8 +2,6 @@
 
 [Ruby Learning Blog's problem 1](rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1)
 
-shift time of subtitle such as:
-
 ```
 645
 01:31:51,210 --> 01:31:54,893
@@ -31,5 +29,5 @@ shift_subtitle -p right -d 1.200 -i input.srt -o output.srt
 
 This command shifts everything 1.2 seconds ahead.
 
-You can use 'left' for shift everything X seconds back.
+
 
