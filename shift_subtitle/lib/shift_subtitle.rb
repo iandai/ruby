@@ -9,7 +9,3 @@ module SubtitleShift
   end
   
 end
-
-# shift_subtitle -p right -d 1.200 -i input.srt -o output.srt
-# 01:31:51,210 --> 01:31:54,893
-# SubtitleShift::run(ARGV)
