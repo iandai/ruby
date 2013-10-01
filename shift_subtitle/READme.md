@@ -19,15 +19,15 @@ in crime in certain neighbourhoods,
 
 On the command line:
 
-```ruby
+```
 gem install shift_subtitle-1.0.0.gem
 shift_subtitle -p right -d 1.200 -i input.srt -o output.srt
 ```
 
--p stands for operation, left or right
--d stands for shift period, 1.200s
--i input srt file
--o outpur srt file
+* -p stands for operation, left or right
+* -d stands for shift period, 1.200s
+* -i input srt file
+* -o outpur srt file
 
 This command shifts everything 1.2 seconds ahead.
 
