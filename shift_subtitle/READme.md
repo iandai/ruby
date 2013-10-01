@@ -49,7 +49,8 @@ output file
 TITANIK
 ```
 
-* result is not correct due to Time class "+" accurate to seconds.
+result is not correct due to Time class "+" accurate to seconds.
+
 ```
 1.9.3-p392 :009 > t = Time.parse("00:01:35,220")
  => 2013-10-01 00:01:35 +0900 
