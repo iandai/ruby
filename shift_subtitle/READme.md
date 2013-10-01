@@ -1,4 +1,4 @@
-== shift_subtitle
+## shift_subtitle
 
 {Ruby Learning Blog's problem}[rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1]
 
@@ -15,7 +15,7 @@ In connection with a dramatic increase
 in crime in certain neighbourhoods,
 ```
 
-== Usage
+## Usage
 
 On the command line:
 	$ gem install shift_subtitle-1.0.0.gem
