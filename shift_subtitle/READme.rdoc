@@ -9,8 +9,11 @@ On the command line:
   $ shift_subtitle -p right -d 1.200 -i input.srt -o output.srt
 
 	-p stands for operation, left or right
+	
 	-d stands for shift period, 1.200s
+	
 	-i input srt file
+	
 	-o outpur srt file
 
 This command shifts everything 1.2 seconds ahead.
