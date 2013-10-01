@@ -1,4 +1,4 @@
-module SubtitleShift
+module ShiftSubtitle
 
   class Subtitle
     require 'time'

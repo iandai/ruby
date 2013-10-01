@@ -1,7 +1,7 @@
 require 'optparse'
 
 
-module SubtitleShift
+module ShiftSubtitle
   class Options
     
     def self.parse(params)
