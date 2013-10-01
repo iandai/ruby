@@ -1,6 +1,6 @@
-## shift_subtitle
+## Shift Subtitle
 
-{Ruby Learning Blog's problem}[rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1]
+[Ruby Learning Blog's problem 1](rubylearning.com/blog/2009/09/24/rpcfn-shift-subtitle-1)
 
 shift time of subtitle such as:
 
