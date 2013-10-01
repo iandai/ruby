@@ -7,14 +7,13 @@ module SubtitleShift
       operation = options[:operation]
       duration = options[:duration].to_f
  
-      input_file  = File.read(options[:input_file])
-      output_file = File.new(options[:output_file], "w")
+      input_file  = File.read(options[:input])
+      output_file = File.new(options[:output], "w")
       
       pattern = /^([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}) --> ([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3})/
       
       output_file << input_file.gsub(pattern) do
-        time_start, time_end = Time.parse($1), Time.parse($2)
-        "#{shift(time_start,operation, duration)} --> #{shift(time_end, operation, duration)}"
+        "#{shift($1,operation, duration)} --> #{shift($2, operation, duration)}"
       end
       
       output_file.flush and output_file.close
