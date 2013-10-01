@@ -6,20 +6,18 @@ module SubtitleShift
     def self.run(options)
       operation = options[:operation]
       duration = options[:duration].to_f
-      input_file = options[:input]
-      output_file = options[:output]
+ 
+      input_file  = File.read(options[:input_file])
+      output_file = File.new(options[:output_file], "w")
       
-      IO.foreach(input_file) do |line|
-        match_str = /^\d{2}:\d{2}:\d{2},\d{3}\s--> [0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}$/.match(line)
-        
-        if match_str
-          times = line.scan(/\d{2}:\d{2}:\d{2},\d{3}\s/)
-          new_line = "#{shift(times[0],operation, duration)} --> #{shift(times[1], operation, duration)}"
-          File.open(output_file, "a+") { |file| file.puts new_line}
-        else
-          File.open(output_file, "a+") { |file| file.puts line}
-        end
+      pattern = /^([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}) --> ([0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3})/
+      
+      output_file << input_file.gsub(pattern) do
+        time_start, time_end = Time.parse($1), Time.parse($2)
+        "#{shift(time_start,operation, duration)} --> #{shift(time_end, operation, duration)}"
       end
+      
+      output_file.flush and output_file.close
     end
   
     #01:31:51,210 + 1.200
