@@ -6,7 +6,8 @@ Gem::Specification.new do |s|
   s.description = "A simple gem to shift subtile"
   s.authors     = ["Ian Dai"]
   s.email       = 'iandaicsu@gmail.com'
-  s.files       = ["lib/shift_subtitle.rb"]
+  s.files       = ["lib/shift_subtitle.rb", "lib/shift_subtitle/options.rb", "lib/shift_subtitle/subtitle.rb"]
+  s.executables << 'shift_subtitle'
   s.homepage    =
     'http://rubygems.org/gems/shift_subtitle'
   s.license       = 'MIT'
