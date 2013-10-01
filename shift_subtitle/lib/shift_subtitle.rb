@@ -10,6 +10,6 @@ module SubtitleShift
   
 end
 
-# ruby shift_subtitle.rb -p add -d 200 -i input.txt -o output.txt
+# shift_subtitle -p right -d 1.200 -i input.srt -o output.srt
 # 01:31:51,210 --> 01:31:54,893
 # SubtitleShift::run(ARGV)
